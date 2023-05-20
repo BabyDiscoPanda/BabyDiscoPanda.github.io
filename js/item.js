@@ -38,9 +38,12 @@ function Commencer(id){
 }
 
 function Avancer(){
-    if(compteur < Names.length - 1)
-    compteur++;
-    nbSDD++;
+    if(compteur < Names.length - 1){
+        compteur++;
+        nbSDD++;
+    }else{
+        document.getElementById("suiv").style.display = "none";
+    }
     if(compteur < Names.length - 1){
         // partie haute :
         let Titre;
