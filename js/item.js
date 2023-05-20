@@ -1,12 +1,23 @@
 // crée le tableau d'objet :
 
 function loadItem(){
-    let items;
-    var name;
-    for(var i=1;i<=732;i++){
-        name = downloadFile
+    let tmp = new Object;
+    tmp.id = 0;
+    tmp.name = "delet";
+    var items =[];
+    items.push(tmp);
+    let name;
+    for(let i=1;i<=732;i++){
+        if(i==1){
+            let item = new Object;
+            name = downloadFile(i);
+            item.id = i;
+            item.name = name;
+            items.push(item);
+        }
     }
-
+    document.getElementById('Ttest').innerHTML = items.indexOf(1).name;
+    document.getElementById('test').innerHTML = "<img src='./item/"+items.indexOf(1).id+"/img.webp'/>";
 }
 
 async function downloadFile(name) {
