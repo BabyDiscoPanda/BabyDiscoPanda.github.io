@@ -8,24 +8,46 @@
     
         <!-- mon js  -->
         <script src="./js/item.js"></script>
+        <!-- mon style -->
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body onload="loadItem()">
         <div class="bg-image d-flex align-items-center" style="background-image: url('./img/background/bg.png');background-repeat: no-repeat;background-size: cover;height: 100vh"> 
             <div class ="container">
                 <div class="row" id="dessus">
-                    <div class="col-sm-3 d-flex justify-content-center"></div>
-                    <div class="card col-sm-6">
+                    <div class="col-sm-2 d-flex justify-content-center"></div>
+                    <div class="card col-sm-8">
                         <div class="card-header d-flex justify-content-center">
                           SPINDOWN DICE
                         </div>
                         <div class="card-body">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-sm-12 d-flex justify-content-center" id="Titre"></div>
+                                    <div class="col-sm-12 d-flex justify-content-center">
+                                        <div id="Titre" style="display: none;">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 d-flex justify-content-center">
+                                        <!-- RECHERCHE -->
+                                        <div class="col-sm-12" id="recherche" style="display: block;">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-12 d-flex justify-content-center">
+                                                        <input class="input" type="text" id="rechercheInput" placeholder="Item ...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="suggestion">
+
+                                            </div>
+                                            <script src="./js/code.js"></script>
+                                        </div>   
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer" id="footer" style="display: none;">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm-12 d-flex justify-content-center" id="Sous-Titre"></div>
@@ -33,13 +55,24 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3 d-flex justify-content-center"></div>
+                    <div class="col-sm-2 d-flex justify-content-center">
+                        <div class="container" id="SDD" style="display: none;">
+                            <div class="row">
+                                <div class="card">
+                                    <div class="card-header d-flex justify-content-center">
+                                      Number of SpinDown Dice
+                                    </div>
+                                    <div id="nbSDD"class="card-body d-flex justify-content-center" style="font-size: 200%;">
+                                        
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="d-flex justify-content-center" id="bouton">
-                        <button onclick="Commencer(0)"> commencer</button>
-                        <button onclick="Avancer();Item1();Item2();Item3();Item4()" id="suiv" style="display: none;"> suivant</button>
-                        <button onclick="Recherche()" id="rech"> Recherche</button>
+                        <button onclick="Avancer();" id="suiv" style="display: none;"> suivant</button>
                     </div>
                 </div>
                 
