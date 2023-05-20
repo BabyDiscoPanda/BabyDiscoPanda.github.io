@@ -28,10 +28,64 @@ let compteur;
 function Commencer(){
         compteur = 0;
         document.getElementById('Ttest').innerHTML = `${compteur} : ${Names[compteur]}`;
+        Item1();
+        Item2();
+        Item3();
+        Item4();
 }
 
 function Avancer(){
+    if(compteur < Names.length - 1)
     compteur++;
-    document.getElementById('Ttest').innerHTML = "";
-    document.getElementById('Ttest').innerHTML = `${compteur} : ${Names[compteur]}`;
+    if(compteur < Names.length - 1){
+        document.getElementById('Ttest').innerHTML = "";
+        document.getElementById('Ttest').innerHTML = `${compteur} : ${Names[compteur]}`;
+    } else {
+        document.getElementById('Ttest').innerHTML = "";
+        document.getElementById('Ttest').innerHTML = `ELEMENT DELETED`;
+    }
+}
+
+function Item1(){
+    if(compteur+1 < Names.length - 1){
+        document.getElementById('Ttest1').innerHTML = "";
+        document.getElementById('Ttest1').innerHTML = `${compteur+1} : ${Names[compteur+1]}`;
+    } else {
+        document.getElementById('Ttest1').innerHTML = "";
+        document.getElementById('Ttest1').innerHTML = `ELEMENT DELETED`;
+    }
+}
+
+function Item2(){
+    if(compteur+2 < Names.length - 2){
+        document.getElementById('Ttest2').innerHTML = "";
+        document.getElementById('Ttest2').innerHTML = `${compteur+2} : ${Names[compteur+2]}`;
+    } else {
+        document.getElementById('Ttest2').innerHTML = "";
+        document.getElementById('Ttest2').innerHTML = `ELEMENT DELETED`;
+    }
+}
+
+function Item3(){
+    if(compteur+3 < Names.length - 3){
+        document.getElementById('Ttest3').innerHTML = "";
+        document.getElementById('Ttest3').innerHTML = `${compteur+3} : ${Names[compteur+3]}`;
+    } else {
+        document.getElementById('Ttest3').innerHTML = "";
+        document.getElementById('Ttest3').innerHTML = `ELEMENT DELETED`;
+    }
+}
+
+function Item4(){
+    if(compteur+4 < Names.length - 4){
+        document.getElementById('Ttest4').innerHTML = "";
+        document.getElementById('Ttest4').innerHTML = `${compteur+4} : ${Names[compteur+4]}`;
+    } else {
+        document.getElementById('Ttest4').innerHTML = "";
+        document.getElementById('Ttest4').innerHTML = `ELEMENT DELETED`;
+    }
+}
+
+function Recherche(){
+    compteur  = Names.length-5;
 }
