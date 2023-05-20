@@ -9,13 +9,16 @@
         <!-- mon js  -->
         <script src="./js/item.js"></script>
     </head>
-    <body>
+    <body onload="loadItem()">
         <div class="bg-image" style="background-image: url('./img/background/bg.png');background-repeat: no-repeat;background-size: cover;height: 100vh"> 
-            <div onload="loadItem()">
-                <div id="Ttest"></div>
+            <div>
+                <div id="Ttest" style="color: aliceblue;"></div>
                 <div id="test"></div>
+                <button onclick="Commencer()"> commencer</button>
+                <button onclick="Avancer()"> suivant</button>
             </div>
         </div>
         </div>
+        
     </body>
 </html>
