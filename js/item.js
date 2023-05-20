@@ -27,11 +27,12 @@ function loadItem(){
 let compteur;
 function Commencer(){
         compteur = 0;
-        document.getElementById('Ttest').innerHTML = `${compteur} : ${Names[compteur]}`;
-        Item1();
-        Item2();
-        Item3();
-        Item4();
+        let Titre;
+        let Tmp;
+        Titre = `${compteur} : ${Names[compteur]} -> ${Item1()}`;
+        document.getElementById('Titre').innerHTML = Titre;
+        let Sous_titre = `${Item2()} -> ${Item3()} -> ${Item4()}`;
+        document.getElementById('Sous-Titre').innerHTML = Sous_titre;
         document.getElementById("suiv").style.display = "block";
 }
 
@@ -39,57 +40,56 @@ function Avancer(){
     if(compteur < Names.length - 1)
     compteur++;
     if(compteur < Names.length - 1){
-        document.getElementById('Ttest').innerHTML = "";
-        document.getElementById('Ttest').innerHTML = `${compteur} : ${Names[compteur]}`;
+        // partie haute :
+        let Titre;
+        let Tmp = Item1();
+        Titre = `${compteur} : ${Names[compteur]} -> ${Tmp}`;
+        document.getElementById('Titre').innerHTML = Titre;
+        let Sous_titre = `${Item2()} -> ${Item3()} -> ${Item4()}`;
+        document.getElementById('Sous-Titre').innerHTML = Sous_titre;
     }
 }
 
 function Item1(){
     if(compteur+1 < Names.length - 1){
-        document.getElementById('Ttest1').innerHTML = "";
-        document.getElementById('Ttest1').innerHTML = `${compteur+1} : ${Names[compteur+1]}`;
+        return compteur+1 + " : " + Names[compteur+1];
     } else {
-        document.getElementById('Ttest1').innerHTML = "";
-        document.getElementById('Ttest1').innerHTML = `ELEMENT DELETED`;
+        return `ELEMENT DELETED`;
     }
 }
 
+
 function Item2(){
     if(compteur+2 < Names.length - 1){
-        document.getElementById('Ttest2').innerHTML = "";
-        document.getElementById('Ttest2').innerHTML = `${compteur+2} : ${Names[compteur+2]}`;
+        return compteur+2 + " : " + Names[compteur+2];
     } else {
-        document.getElementById('Ttest2').innerHTML = "";
-        document.getElementById('Ttest2').innerHTML = `ELEMENT DELETED`;
+        return `ELEMENT DELETED`;
     }
 }
 
 function Item3(){
     if(compteur+3 < Names.length - 1){
-        document.getElementById('Ttest3').innerHTML = "";
-        document.getElementById('Ttest3').innerHTML = `${compteur+3} : ${Names[compteur+3]}`;
+        return compteur+3 + " : " + Names[compteur+3];
     } else {
-        document.getElementById('Ttest3').innerHTML = "";
-        document.getElementById('Ttest3').innerHTML = `ELEMENT DELETED`;
+        return `ELEMENT DELETED`;
     }
 }
 
 function Item4(){
     if(compteur+4 < Names.length - 1){
-        document.getElementById('Ttest4').innerHTML = "";
-        document.getElementById('Ttest4').innerHTML = `${compteur+4} : ${Names[compteur+4]}`;
+        return compteur+4 + " : " + Names[compteur+4];
     } else {
-        document.getElementById('Ttest4').innerHTML = "";
-        document.getElementById('Ttest4').innerHTML = `ELEMENT DELETED`;
+        return `ELEMENT DELETED`;
     }
 }
 
 function Recherche(){
-    compteur  = Names.length-5;
-    document.getElementById('Ttest').innerHTML = `${compteur} : ${Names[compteur]}`;
-    Item1();
-    Item2();
-    Item3();
-    Item4();
+    compteur = Names.length-5;
+    let Titre;
+    let Tmp;
+    Titre = `${compteur} : ${Names[compteur]} -> ${Item1()}`;
+    document.getElementById('Titre').innerHTML = Titre;
+    let Sous_titre = `${Item2()} -> ${Item3()} -> ${Item4()}`;
+    document.getElementById('Sous-Titre').innerHTML = Sous_titre;
     document.getElementById("suiv").style.display = "block";
 }

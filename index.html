@@ -10,28 +10,34 @@
         <script src="./js/item.js"></script>
     </head>
     <body onload="loadItem()">
-        <div class="bg-image" style="background-image: url('./img/background/bg.png');background-repeat: no-repeat;background-size: cover;height: 100vh"> 
+        <div class="bg-image d-flex align-items-center" style="background-image: url('./img/background/bg.png');background-repeat: no-repeat;background-size: cover;height: 100vh"> 
             <div class ="container">
                 <div class="row" id="dessus">
-                    <div class="col-sm-2 d-flex justify-content-center"></div>
-                    <div class="col-sm-3 d-flex justify-content-center" id="Ttest" style="color: aliceblue;"></div>
-                    <div class="col-sm-2 d-flex justify-content-center" style="color: aliceblue;"> -> </div>
-                    <div class="col-sm-3 d-flex justify-content-center" id="Ttest1" style="color: aliceblue;"></div>
-                    <div class="col-sm-2 d-flex justify-content-center"></div>
+                    <div class="col-sm-3 d-flex justify-content-center"></div>
+                    <div class="card col-sm-6">
+                        <div class="card-header d-flex justify-content-center">
+                          SPINDOWN DICE
+                        </div>
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 d-flex justify-content-center" id="Titre"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 d-flex justify-content-center" id="Sous-Titre"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 d-flex justify-content-center"></div>
                 </div>
-                <div class="row" id="dessous">
-                    <div class="col-sm-2 d-flex justify-content-center"></div>
-                    <div class="col-sm-2 d-flex justify-content-center" id="Ttest2" style="color: aliceblue;"></div>
-                    <div class="col-sm-1 d-flex justify-content-center" style="color: aliceblue;"> -> </div>
-                    <div class="col-sm-2 d-flex justify-content-center" id="Ttest3" style="color: aliceblue;"></div>
-                    <div class="col-sm-1 d-flex justify-content-center" style="color: aliceblue;"> -> </div>
-                    <div class="col-sm-2 d-flex justify-content-center" id="Ttest4" style="color: aliceblue;"></div>
-                    <div class="col-sm-2 d-flex justify-content-center"></div>
-                </div>
-                
                 <div class="row">
                     <div class="d-flex justify-content-center" id="bouton">
-                        <button onclick="Commencer()"> commencer</button>
+                        <button onclick="Commencer(0)"> commencer</button>
                         <button onclick="Avancer();Item1();Item2();Item3();Item4()" id="suiv" style="display: none;"> suivant</button>
                         <button onclick="Recherche()" id="rech"> Recherche</button>
                     </div>
