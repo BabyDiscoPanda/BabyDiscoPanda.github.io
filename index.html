@@ -15,7 +15,17 @@
         <div class="bg-image d-flex align-items-center" style="background-image: url('./img/background/bg.png');background-repeat: no-repeat;background-size: cover;height: 100vh"> 
             <div class ="container">
                 <div class="row" id="dessus">
-                    <div class="col-sm-2 d-flex justify-content-center"></div>
+                    <div class="col-sm-2 d-flex justify-content-center">
+                        <div class="container" id="DICE" style="display: none;">
+                            <div class="row">
+                                <div class="card">
+                                    <div class="card-body d-flex justify-content-center" style="font-size: 200%;">
+                                        <img src="img/SDD.png" alt="SDD" onclick="Avancer();" width="150%" height="auto">
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card col-sm-8">
                         <div class="card-header d-flex justify-content-center">
                           SPINDOWN DICE
@@ -69,14 +79,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
                 <div class="row">
-                    <div class="d-flex justify-content-center" id="bouton">
-                        <button onclick="Avancer();" id="suiv" style="display: none;"> suivant</button>
-                    </div>
-                </div>
-                
-                
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-2 d-flex justify-content-center"><button id="retour" onclick="retour();" style="display: none;">RETOUR</button></div>
+                    <div class="col-sm-5"></div>
+                </div>       
             </div>
         </div>
         </div>

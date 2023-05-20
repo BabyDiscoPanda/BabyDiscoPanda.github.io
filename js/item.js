@@ -22,18 +22,20 @@ function loadItem(){
 }
 let compteur;
 function Commencer(id){
+        nbSDD = 0;
         compteur = id;
         let Titre;
         let Tmp;
-        Titre = `${compteur} : ${Names[compteur]} -> ${Item1()}`;
+        Titre = `${Names[compteur]} -> ${Item1()}`;
         document.getElementById('Titre').innerHTML = Titre;
-        let Sous_titre = `${Item2()} -> ${Item3()} -> ${Item4()}`;
+        let Sous_titre = `${Item1()} -> ${Item2()} -> ${Item3()} -> ${Item4()}`;
         document.getElementById('Sous-Titre').innerHTML = Sous_titre;
-        document.getElementById("suiv").style.display = "block";
+        document.getElementById("DICE").style.display = "block";
         document.getElementById("footer").style.display = "block";
         document.getElementById("Titre").style.display = "block";
         document.getElementById("SDD").style.display = "block";
         document.getElementById('nbSDD').innerHTML = `${nbSDD}`;
+        document.getElementById("retour").style.display = "block";
         document.getElementById("recherche").style.display = "none";
 }
 
@@ -48,9 +50,9 @@ function Avancer(){
         // partie haute :
         let Titre;
         let Tmp = Item1();
-        Titre = `${compteur} : ${Names[compteur]} -> ${Tmp}`;
+        Titre = `${Names[compteur]} -> ${Tmp}`;
         document.getElementById('Titre').innerHTML = Titre;
-        let Sous_titre = `${Item2()} -> ${Item3()} -> ${Item4()}`;
+        let Sous_titre = `${Item1()} -> ${Item2()} -> ${Item3()} -> ${Item4()}`;
         document.getElementById('Sous-Titre').innerHTML = Sous_titre;
         document.getElementById('nbSDD').innerHTML = `${nbSDD}`;
     }
@@ -58,7 +60,7 @@ function Avancer(){
 
 function Item1(){
     if(compteur+1 < Names.length - 1){
-        return compteur+1 + " : " + Names[compteur+1];
+        return Names[compteur+1];
     } else {
         return `ELEMENT DELETED`;
     }
@@ -67,7 +69,7 @@ function Item1(){
 
 function Item2(){
     if(compteur+2 < Names.length - 1){
-        return compteur+2 + " : " + Names[compteur+2];
+        return Names[compteur+2];
     } else {
         return `ELEMENT DELETED`;
     }
@@ -75,7 +77,7 @@ function Item2(){
 
 function Item3(){
     if(compteur+3 < Names.length - 1){
-        return compteur+3 + " : " + Names[compteur+3];
+        return Names[compteur+3];
     } else {
         return `ELEMENT DELETED`;
     }
@@ -83,7 +85,7 @@ function Item3(){
 
 function Item4(){
     if(compteur+4 < Names.length - 1){
-        return compteur+4 + " : " + Names[compteur+4];
+        return Names[compteur+4];
     } else {
         return `ELEMENT DELETED`;
     }
@@ -98,4 +100,13 @@ function Recherche(){
     let Sous_titre = `${Item2()} -> ${Item3()} -> ${Item4()}`;
     document.getElementById('Sous-Titre').innerHTML = Sous_titre;
     document.getElementById("suiv").style.display = "block";
+}
+
+function retour(){
+    document.getElementById("DICE").style.display = "none";
+    document.getElementById("footer").style.display = "none";
+    document.getElementById("Titre").style.display = "none";
+    document.getElementById("SDD").style.display = "none";
+    document.getElementById("retour").style.display = "none";
+    document.getElementById("recherche").style.display = "block";
 }
