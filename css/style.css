@@ -8,3 +8,15 @@
     border: dotted white;
     border-width: 5%;
 }
+
+.box{
+    border: solid black;
+    border-width: 3%;
+}
+
+.box:hover{
+    background-color: deepskyblue;
+    color: white;
+    border: dotted white;
+    border-width: 5%;
+}

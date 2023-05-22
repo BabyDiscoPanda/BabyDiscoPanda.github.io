@@ -2,8 +2,6 @@ const searchinput = document.getElementById('rechercheInput');
 
 searchinput.addEventListener('keyup',function(){
 
-    let limit = 0;
-
     const input = searchinput.value;
 
     const result = items.filter(item => item.name.toLocaleLowerCase().includes(input.toLocaleLowerCase()));
