@@ -1,0 +1,10 @@
+.choix{
+    border: solid black;
+    border-width: 3%;
+}
+.choix:hover{
+    background-color: deepskyblue;
+    color: white;
+    border: dotted white;
+    border-width: 5%;
+}

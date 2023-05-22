@@ -37,6 +37,7 @@ function Commencer(id){
         document.getElementById('nbSDD').innerHTML = `${nbSDD}`;
         document.getElementById("retour").style.display = "block";
         document.getElementById("recherche").style.display = "none";
+        document.getElementById("TitreCarte").innerHTML = "SPINDOWN DICE - Click on the Spindown dice to roll -1";
 }
 
 function Avancer(){
@@ -109,4 +110,5 @@ function retour(){
     document.getElementById("SDD").style.display = "none";
     document.getElementById("retour").style.display = "none";
     document.getElementById("recherche").style.display = "block";
+    document.getElementById("TitreCarte").innerHTML = "SPINDOWN DICE - SEARCH ITEM";
 }
